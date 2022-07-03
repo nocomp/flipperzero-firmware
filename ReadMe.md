@@ -87,7 +87,7 @@ then select **`flipper-z-f7-full-(CURRENT VERSION).dfu`**
 
 <br>
 <br>
-# Where I can find BADUSB payloads?
+#Where I can find BADUSB payloads?
 Here is a repo for Hack5 payloads optimized for Flipper Zero
 
 https://github.com/nocomp/Flipper_Zero_Badusb_hack5_payloads
