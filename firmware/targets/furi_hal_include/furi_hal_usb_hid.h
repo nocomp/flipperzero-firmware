@@ -6,7 +6,14 @@ enum HidKeyboardKeys {
     KEY_ERROR_ROLLOVER = 0x01,
     KEY_POST_FAIL = 0x02,
     KEY_ERROR_UNDEFINED = 0x03,
-    KEY_A = 0x04,
+
+    KEY_ENTER = 0x28,
+    KEY_ESC = 0x29,
+    KEY_BACKSPACE = 0x2A,
+    KEY_TAB = 0x2B,
+    KEY_SPACE = 0x2C,
+
+    KEY_A = 0x14,
     KEY_B = 0x05,
     KEY_C = 0x06,
     KEY_D = 0x07,
@@ -18,20 +25,21 @@ enum HidKeyboardKeys {
     KEY_J = 0x0D,
     KEY_K = 0x0E,
     KEY_L = 0x0F,
-    KEY_M = 0x10,
+    KEY_M = 0x33,
     KEY_N = 0x11,
     KEY_O = 0x12,
     KEY_P = 0x13,
-    KEY_Q = 0x14,
+    KEY_Q = 0x04,
     KEY_R = 0x15,
     KEY_S = 0x16,
     KEY_T = 0x17,
     KEY_U = 0x18,
     KEY_V = 0x19,
-    KEY_W = 0x1A,
+    KEY_W = 0x1D,
     KEY_X = 0x1B,
     KEY_Y = 0x1C,
-    KEY_Z = 0x1D,
+    KEY_Z = 0x1A,
+
     KEY_1 = 0x1E,
     KEY_2 = 0x1F,
     KEY_3 = 0x20,
@@ -42,49 +50,55 @@ enum HidKeyboardKeys {
     KEY_8 = 0x25,
     KEY_9 = 0x26,
     KEY_0 = 0x27,
-    KEY_ENTER = 0x28,
-    KEY_ESC = 0x29,
-    KEY_BACKSPACE = 0x2A,
-    KEY_TAB = 0x2B,
-    KEY_SPACE = 0x2C,
-    KEY_MINUS = 0x2D,
+
+    KEY_EXCLAMATION = 0x38,
+    KEY_DOUBLE_QUOTE = 0x20,
+    KEY_DOLLAR = 0x30,
+    KEY_U_BACKTICK = 0x34,
+    KEY_AND = 0x1E,
+    KEY_SINGLE_QUOTE = 0x21,
+    KEY_LEFT_PARENTHESIS = 0x22,
+    KEY_RIGHT_PARENTHESIS = 0x2D,
+    KEY_STAR = 0x31,
     KEY_EQUAL = 0x2E,
-    KEY_LEFT_BRACE = 0x2F,
-    KEY_RIGHT_BRACE = 0x30,
-    KEY_BACKSLASH = 0x31,
-    KEY_NON_US_NUM = 0x32,
-    KEY_SEMICOLON = 0x33,
-    KEY_QUOTE = 0x34,
-    KEY_TILDE = 0x35,
-    KEY_COMMA = 0x36,
-    KEY_PERIOD = 0x37,
-    KEY_SLASH = 0x38,
-    KEY_CAPS_LOCK = 0x39,
-    KEY_F1 = 0x3A,
-    KEY_F2 = 0x3B,
-    KEY_F3 = 0x3C,
-    KEY_F4 = 0x3D,
-    KEY_F5 = 0x3E,
-    KEY_F6 = 0x3F,
-    KEY_F7 = 0x40,
-    KEY_F8 = 0x41,
-    KEY_F9 = 0x42,
-    KEY_F10 = 0x43,
-    KEY_F11 = 0x44,
-    KEY_F12 = 0x45,
-    KEY_PRINT = 0x46,
+    KEY_COMMA = 0x10,
+    KEY_DASH = 0x23,
+    KEY_SEMI_COLON = 0x36,
+    KEY_DOUBLE_POINTS = 0x37,
+    KEY_SMALLER = 0x64,
+    KEY_UNDERSCORE = 0x25,
+    KEY_CIRCUMFLEX = 0x2F,
+    KEY_A_BACKTICK = 0x27,
+    KEY_E_ACCENT = 0x1F,
+    KEY_E_BACKTICK = 0x24,
+    KEY_C_CEDILLE = 0x26,
+
+    KEY_CAPS_LOCK = 0xC1,
+    KEY_F1 = 0xC2,
+    KEY_F2 = 0xC3,
+    KEY_F3 = 0xC4,
+    KEY_F4 = 0xC5,
+    KEY_F5 = 0xC6,
+    KEY_F6 = 0xC7,
+    KEY_F7 = 0xC8,
+    KEY_F8 = 0xC9,
+    KEY_F9 = 0xCA,
+    KEY_F10 = 0xCB,
+    KEY_F11 = 0xCC,
+    KEY_F12 = 0xCD,
+    KEY_PRINT = 0x63,
     KEY_SCROLL_LOCK = 0x47,
     KEY_PAUSE = 0x48,
-    KEY_INSERT = 0x49,
-    KEY_HOME = 0x4A,
-    KEY_PAGE_UP = 0x4B,
-    KEY_DELETE = 0x4C,
-    KEY_END = 0x4D,
-    KEY_PAGE_DOWN = 0x4E,
-    KEY_RIGHT_ARROW = 0x4F,
-    KEY_LEFT_ARROW = 0x50,
-    KEY_DOWN_ARROW = 0x51,
-    KEY_UP_ARROW = 0x52,
+    KEY_INSERT = 0xD1,
+    KEY_HOME = 0xD2,
+    KEY_PAGE_UP = 0xD3,
+    KEY_DELETE = 0xD4,
+    KEY_END = 0xD5,
+    KEY_PAGE_DOWN = 0xD6,
+    KEY_RIGHT_ARROW = 0xD7,
+    KEY_LEFT_ARROW = 0xD8,
+    KEY_DOWN_ARROW = 0xD9,
+    KEY_UP_ARROW = 0xDA,
     KEY_NUM_LOCK = 0x53,
     KEYPAD_DIVIDE = 0x54,
     KEYPAD_MULTIPLY = 0x55,
@@ -153,38 +167,38 @@ static const uint16_t hid_asciimap[] = {
     KEY_NONE, // RS
     KEY_NONE, // US
     KEY_SPACE, // ' ' Space
-    KEY_1 | KEY_MOD_LEFT_SHIFT, // !
-    KEY_QUOTE | KEY_MOD_LEFT_SHIFT, // "
-    KEY_3 | KEY_MOD_LEFT_SHIFT, // #
-    KEY_4 | KEY_MOD_LEFT_SHIFT, // $
-    KEY_5 | KEY_MOD_LEFT_SHIFT, // %
-    KEY_7 | KEY_MOD_LEFT_SHIFT, // &
-    KEY_QUOTE, // '
-    KEY_9 | KEY_MOD_LEFT_SHIFT, // (
-    KEY_0 | KEY_MOD_LEFT_SHIFT, // )
-    KEY_8 | KEY_MOD_LEFT_SHIFT, // *
+    KEY_EXCLAMATION, // !
+    KEY_DOUBLE_QUOTE, // "
+    KEY_DOUBLE_QUOTE | KEY_MOD_RIGHT_ALT, // #
+    KEY_DOLLAR, // $
+    KEY_U_BACKTICK | KEY_MOD_LEFT_SHIFT, // %
+    KEY_AND, // &
+    KEY_SINGLE_QUOTE, // '
+    KEY_LEFT_PARENTHESIS, // (
+    KEY_RIGHT_PARENTHESIS, // )
+    KEY_STAR, // *
     KEY_EQUAL | KEY_MOD_LEFT_SHIFT, // +
     KEY_COMMA, // ,
-    KEY_MINUS, // -
-    KEY_PERIOD, // .
-    KEY_SLASH, // /
-    KEY_0, // 0
-    KEY_1, // 1
-    KEY_2, // 2
-    KEY_3, // 3
-    KEY_4, // 4
-    KEY_5, // 5
-    KEY_6, // 6
-    KEY_7, // 7
-    KEY_8, // 8
-    KEY_9, // 9
-    KEY_SEMICOLON | KEY_MOD_LEFT_SHIFT, // :
-    KEY_SEMICOLON, // ;
-    KEY_COMMA | KEY_MOD_LEFT_SHIFT, // <
+    KEY_DASH, // -
+    KEY_SEMI_COLON | KEY_MOD_LEFT_SHIFT, // .
+    KEY_DOUBLE_POINTS | KEY_MOD_LEFT_SHIFT, // /
+    KEY_A_BACKTICK | KEY_MOD_LEFT_SHIFT, // 0
+    KEY_AND | KEY_MOD_LEFT_SHIFT, // 1
+    KEY_E_ACCENT | KEY_MOD_LEFT_SHIFT, // 2
+    KEY_DOUBLE_QUOTE | KEY_MOD_LEFT_SHIFT, // 3
+    KEY_SINGLE_QUOTE | KEY_MOD_LEFT_SHIFT, // 4
+    KEY_LEFT_PARENTHESIS | KEY_MOD_LEFT_SHIFT, // 5
+    KEY_DASH | KEY_MOD_LEFT_SHIFT, // 6
+    KEY_E_BACKTICK | KEY_MOD_LEFT_SHIFT, // 7
+    KEY_UNDERSCORE | KEY_MOD_LEFT_SHIFT, // 8
+    KEY_C_CEDILLE | KEY_MOD_LEFT_SHIFT, // 9
+    KEY_DOUBLE_POINTS, // :
+    KEY_SEMI_COLON, // ;
+    KEY_SMALLER, // <
     KEY_EQUAL, // =
-    KEY_PERIOD | KEY_MOD_LEFT_SHIFT, // >
-    KEY_SLASH | KEY_MOD_LEFT_SHIFT, // ?
-    KEY_2 | KEY_MOD_LEFT_SHIFT, // @
+    KEY_SMALLER | KEY_MOD_LEFT_SHIFT, // >
+    KEY_COMMA | KEY_MOD_LEFT_SHIFT, // ?
+    KEY_A_BACKTICK | KEY_MOD_RIGHT_ALT, // @
     KEY_A | KEY_MOD_LEFT_SHIFT, // A
     KEY_B | KEY_MOD_LEFT_SHIFT, // B
     KEY_C | KEY_MOD_LEFT_SHIFT, // C
@@ -211,12 +225,12 @@ static const uint16_t hid_asciimap[] = {
     KEY_X | KEY_MOD_LEFT_SHIFT, // X
     KEY_Y | KEY_MOD_LEFT_SHIFT, // Y
     KEY_Z | KEY_MOD_LEFT_SHIFT, // Z
-    KEY_LEFT_BRACE, // [
-    KEY_BACKSLASH, // bslash
-    KEY_RIGHT_BRACE, // ]
-    KEY_6 | KEY_MOD_LEFT_SHIFT, // ^
-    KEY_MINUS | KEY_MOD_LEFT_SHIFT, // _
-    KEY_TILDE, // `
+    KEY_LEFT_PARENTHESIS | KEY_MOD_RIGHT_ALT, // [
+    KEY_UNDERSCORE | KEY_MOD_RIGHT_ALT, // bslash
+    KEY_RIGHT_PARENTHESIS | KEY_MOD_RIGHT_ALT, // ]
+    KEY_CIRCUMFLEX, // ^
+    KEY_UNDERSCORE, // _
+    KEY_E_BACKTICK | KEY_MOD_RIGHT_ALT, // `
     KEY_A, // a
     KEY_B, // b
     KEY_C, // c
@@ -243,10 +257,10 @@ static const uint16_t hid_asciimap[] = {
     KEY_X, // x
     KEY_Y, // y
     KEY_Z, // z
-    KEY_LEFT_BRACE | KEY_MOD_LEFT_SHIFT, // {
-    KEY_BACKSLASH | KEY_MOD_LEFT_SHIFT, // |
-    KEY_RIGHT_BRACE | KEY_MOD_LEFT_SHIFT, // }
-    KEY_TILDE | KEY_MOD_LEFT_SHIFT, // ~
+    KEY_SINGLE_QUOTE | KEY_MOD_RIGHT_ALT, // {
+    KEY_DASH | KEY_MOD_RIGHT_ALT, // |
+    KEY_EQUAL | KEY_MOD_RIGHT_ALT, // }
+    KEY_E_ACCENT | KEY_MOD_RIGHT_ALT, // ~
     KEY_NONE, // DEL
 };
 
