@@ -91,13 +91,10 @@ then select **`flipper-z-f7-full-(CURRENT VERSION).dfu`**
 
 <br>
 <br>
+# Where I can find BADUSB payloads?
+Here is a repo for Hack5 payloads optimized for Flipper Zero
 
-## Support us so we can buy equipment and develop new features
-* ETH/BSC/ERC20-Tokens: `0xFebF1bBc8229418FF2408C07AF6Afa49152fEc6a`
-* BTC: `bc1q0np836jk9jwr4dd7p6qv66d04vamtqkxrecck9`
-* DOGE: `D6R6gYgBn5LwTNmPyvAQR6bZ9EtGgFCpvv`
-* LTC: `ltc1q3ex4ejkl0xpx3znwrmth4lyuadr5qgv8tmq8z9`
-
+https://github.com/nocomp/Flipper_Zero_Badusb_hack5_payloads
 
 # Where I can find IR, SubGhz, ... DBs, and other stuff?
 ## [Awesome Flipper Zero - Github](https://github.com/djsime1/awesome-flipperzero)
