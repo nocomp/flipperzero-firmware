@@ -1,5 +1,5 @@
 App(
-    appid="nrfsniff_usb",
+    appid="nrfsniff",
     name="NRF Sniff",
     apptype=FlipperAppType.APP,
     entry_point="nrfsnif_usb_app",
