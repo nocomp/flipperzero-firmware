@@ -12,8 +12,11 @@ https://github.com/Eng1n33r/flipperzero-firmware
 
 ### This software is for experimental purposes only and is not meant for any illegal activity/purposes. <br> We do not condone illegal activity and strongly encourage keeping transmissions to legal/valid uses allowed by law. <br> Also this software is made without any support from Flipper Devices and in no way related to official devs. 
 ### Please use for experimental purposes only!
+# Optimized firmware for running BadUSB attacks on AZERTY keymap.!! 
+Mod found here: https://github.com/Log-s/flipperzero-contributions
+if you want to compile a release for classic keymap, you need to replace firmware/targets/furi_hal_usb_hid.h but the original found here
 
-
+https://raw.githubusercontent.com/Eng1n33r/flipperzero-firmware/dev/firmware/targets/furi_hal_include/furi_hal_usb_hid.h
 <br>
 <br>
 Our Discord Community:
@@ -61,7 +64,7 @@ then select **`flipper-z-f7-full-(CURRENT VERSION).dfu`**
 
 ## With USB DFU 
 
-1. Download latest [Firmware](https://github.com/Eng1n33r/flipperzero-firmware/releases)
+1. Download latest [Firmware](https://github.com/nocomp/flipperzero-unleashed-marineland/releases)
 
 2. Reboot Flipper to Bootloader
  - Press and hold `← Left` + `↩ Back` for reset 
@@ -101,7 +104,7 @@ https://github.com/nocomp/Flipper_Zero_Badusb_hack5_payloads
 
 You should clone with 
 ```shell
-$ git clone --recursive https://github.com/Eng1n33r/flipperzero-firmware.git
+$ git clone --recursive https://github.com/nocomp/flipperzero-unleashed-marineland
 ```
 
 ## Build with Docker
