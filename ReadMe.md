@@ -1,13 +1,13 @@
 # Flipper Zero Unleashed Firmware
 
-<a href="https://ibb.co/wQ12PVc"><img src="https://i.ibb.co/wQ12PVc/fzCUSTOM.png" alt="fzCUSTOM" border="0"></a>
+<img src="https://www.marineland.fr/sites/marineland.fr/files/620x340_vignette_home_page_campagne_avril.jpeg" alt="marineland-firmware" border="0">
 
-Welcome to Flipper Zero's Custom Firmware repo!
-Our goal is to make any features possible in this device without any limitations! 
+Welcome to Flipper Zero's Marineland Firmware repo!
+This firmware is a fork of Unleashed firmware for test and dev purposes, use it with no garanties
 
-Please help us implement emulation for all dynamic (rolling codes) protocols and brute-force app!
-<br>
-<br>
+Original rep:
+
+https://github.com/Eng1n33r/flipperzero-firmware
 
 
 ### This software is for experimental purposes only and is not meant for any illegal activity/purposes. <br> We do not condone illegal activity and strongly encourage keeping transmissions to legal/valid uses allowed by law. <br> Also this software is made without any support from Flipper Devices and in no way related to official devs. 
